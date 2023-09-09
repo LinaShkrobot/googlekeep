@@ -95,19 +95,23 @@ body {
   cursor: pointer;
 }
 
-.dots-container__dropdown {
-  display: flex;
+.notes-container__dropdown {
+  position: absolute;
+  left: 10px;
+  bottom: -45px;
+  display: none;
   justify-content: center;
   align-items: center;
   border: 1px solid grey;
   background-color: white;
   width: 150px;
   height: 35px;
+  font-size: 20px;
 }
 
-.dropdown_delete {
-  color: gray;
-  font-size: 18px;
+.notes-container__dropdown:hover {
+  background-color: rgb(224, 217, 217);
+  cursor: pointer;
 }
 
 .dot {

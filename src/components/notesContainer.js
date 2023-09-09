@@ -31,11 +31,23 @@ export class NotesContainer {
 
       const textContainer = document.createElement('div');
       textContainer.textContent = item.text;
+      const deleteField = document.createElement('div');
+      deleteField.classList.add('notes-container__dropdown');
+      deleteField.style.display = 'none';
+      deleteField.textContent = 'Удалить';
 
       noteContainer.appendChild(dotsContainer);
       noteContainer.appendChild(textContainer);
-
+      dotsContainer.appendChild(deleteField);
       this.node.appendChild(noteContainer);
+
+      dotsContainer.addEventListener('click', function() {
+        if ( deleteField.style.display === 'none') {
+          deleteField.style.display = 'flex';
+        } else {
+          deleteField.style.display = 'none';
+        };
+      });
     });
   };
-}
+};
